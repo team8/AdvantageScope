@@ -11,3 +11,6 @@ Advantage Scope is the desktop application used to interact with our [AdvantageK
 1. Click the release marked "Latest" under "Releases".
 2. Download the appropriate build for your OS & architecture.
 3. When opening the app for the first time on macOS, right click the icon and select "Open" to bypass Gatekeeper restrictions.
+
+
+Reworking AdvantageScope to implement a better logging system
