@@ -814,6 +814,14 @@ ipcMain.on("add-tab", () => {
       }
     })
   );
+  menu.append(
+    new MenuItem({
+      label: "testing",
+      click(_, window) {
+        window?.webContents.send("add-tab-response", 5);
+      }
+    })
+  );
 
   menu.popup();
 });

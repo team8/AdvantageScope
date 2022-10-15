@@ -208,6 +208,9 @@ export class Tabs {
         this.#viewer.appendChild(tabData.content);
         tabData.controller = new GenericVizController(tabData.content, "points");
         break;
+      case 5:
+        tabData.title = "Test";
+        break;
     }
     this.#tabList.push(tabData);
     this.#selectedTab = this.#tabList.length - 1;
