@@ -711,6 +711,21 @@ table.data-table tr.selected td {
   background-color: #aaa;
 }
 
+div.test-table-container {
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+table.test-table{
+  width: 100%;
+}
+
+table.test-table tr td{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+
 @media (prefers-color-scheme: dark) {
   table.data-table th {
     border-right: 1px solid #333;

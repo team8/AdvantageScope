@@ -2,6 +2,7 @@ import { MetadataController } from "./tabControllers/metadataController.mjs";
 import { LineGraphController } from "./tabControllers/lineGraphController.mjs";
 import { TableController } from "./tabControllers/tableController.mjs";
 import { GenericVizController } from "./tabControllers/genericVizController.mjs";
+import { testTab } from "./tabControllers/testTab.mjs";
 
 // Manages the tab bar
 export class Tabs {
@@ -204,12 +205,18 @@ export class Tabs {
       case 4:
         tabData.title = "Points";
         tabData.content = this.#contentTemplates.children[3].cloneNode(true);
+        console.log(tabData);
         tabData.content.insertBefore(this.#contentTemplates.children[5].cloneNode(true), tabData.content.firstChild);
         this.#viewer.appendChild(tabData.content);
         tabData.controller = new GenericVizController(tabData.content, "points");
         break;
       case 5:
         tabData.title = "Test";
+        tabData.content = this.#contentTemplates.children[6].cloneNode(true);
+        console.log(tabData.content);
+        tabData.content.insertBefore(this.#contentTemplates.children[6].cloneNode(true), tabData.content.firstChild);
+        this.#viewer.appendChild(tabData.content);
+        tabData.controller = new testTab(tabData.content);
         break;
     }
     this.#tabList.push(tabData);
