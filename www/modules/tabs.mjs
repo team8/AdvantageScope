@@ -210,7 +210,7 @@ export class Tabs {
         tabData.controller = new GenericVizController(tabData.content, "points");
         break;
       case 5:
-        tabData.title = "LogInclusion"
+        tabData.title = "mihirTest"
         tabData.content = this.#contentTemplates.children[5].cloneNode(true);
     }
     this.#tabList.push(tabData);
