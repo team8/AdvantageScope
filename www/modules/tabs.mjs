@@ -2,6 +2,7 @@ import { MetadataController } from "./tabControllers/metadataController.mjs";
 import { LineGraphController } from "./tabControllers/lineGraphController.mjs";
 import { TableController } from "./tabControllers/tableController.mjs";
 import { GenericVizController } from "./tabControllers/genericVizController.mjs";
+import { mihirTest } from "./tabControllers/mihirTest.mjs";
 
 // Manages the tab bar
 export class Tabs {
@@ -208,6 +209,9 @@ export class Tabs {
         this.#viewer.appendChild(tabData.content);
         tabData.controller = new GenericVizController(tabData.content, "points");
         break;
+      case 5:
+        tabData.title = "LogInclusion"
+        tabData.content = this.#contentTemplates.children[5].cloneNode(true);
     }
     this.#tabList.push(tabData);
     this.#selectedTab = this.#tabList.length - 1;
