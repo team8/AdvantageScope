@@ -357,6 +357,13 @@ function setupMenu() {
             window?.webContents.send("tab-command", "new", 4);
           }
         },
+        {
+          label: "Mihir Tab",
+          accelerator: "CmdorCtrl+5",
+          click(_, window) {
+            window?.webContents.send("tab-command", "new", 5);
+          }
+        },
         { type: "separator" },
         {
           label: "Previous Tab",

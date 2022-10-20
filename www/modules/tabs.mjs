@@ -2,7 +2,7 @@ import { MetadataController } from "./tabControllers/metadataController.mjs";
 import { LineGraphController } from "./tabControllers/lineGraphController.mjs";
 import { TableController } from "./tabControllers/tableController.mjs";
 import { GenericVizController } from "./tabControllers/genericVizController.mjs";
-import { mihirTest } from "./tabControllers/mihirTest.mjs";
+import { MihirTestTab } from "./tabControllers/mihirTest.mjs";
 
 // Manages the tab bar
 export class Tabs {
@@ -212,6 +212,8 @@ export class Tabs {
       case 5:
         tabData.title = "mihirTest"
         tabData.content = this.#contentTemplates.children[5].cloneNode(true);
+        this.#viewer.appendChild(tabData.content);
+        tabData.controller = new MihirTestTab(tabData.content, "newTabTest")
     }
     this.#tabList.push(tabData);
     this.#selectedTab = this.#tabList.length - 1;
