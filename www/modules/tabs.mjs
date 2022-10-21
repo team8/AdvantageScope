@@ -211,8 +211,8 @@ export class Tabs {
         break;
       case 5:
         tabData.title = "mihirTest"
-        tabData.content = this.#contentTemplates.children[5].cloneNode(true);
-        tabData.content.insertBefore(this.#contentTemplates.children[5].cloneNode(true), tabData.content.firstChild);
+        tabData.content = this.#contentTemplates.children[6].cloneNode(true);
+        //tabData.content.insertBefore(this.#contentTemplates.children[5].cloneNode(true), tabData.content.firstChild);
         this.#viewer.appendChild(tabData.content);
         tabData.controller = new MihirTestTab(tabData.content, "newTabTest")
     }
