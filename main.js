@@ -351,6 +351,13 @@ function setupMenu() {
           }
         },
         {
+          label: "New FilterTable",
+          accelerator: "CmdOrCtrl+5",
+          click(_, window) {
+            window?.webContents.send("tab-command", "new", 5);
+          }
+        },
+        {
           label: "New Points",
           accelerator: "CmdOrCtrl+4",
           click(_, window) {
