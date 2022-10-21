@@ -18,30 +18,34 @@ export class testTab{
         console.log(this.#filterForm.children);
         console.log((this.#table.nodeName));
 
-        var header = this.#table.insertRow(0);
-        header.insertCell(0).innerHTML = "timestamp";
-        header.insertCell(1).innerHTML = "data";
+        this.resetTable();
 
         for (var i = 0; i < 10; i++){
             this.timestamps.push(i);
-            this.data.push(i / 2);
+            this.data.push((i/2).toString());
         }
 
         this.displayTable({lookfor: null});
 
         this.#filterForm.addEventListener("submit", (event) => {
-            console.log(this.#filterForm["lookfor"]);
-            //this.displayTable({ lookfor: this.#filterForm["lookfor"].innerHTML });
+            var input = this.#filterForm["lookfor"].value;
+            console.log(input);
             this.resetTable();
+            if (input.length == 0) {
+                this.displayTable({ lookfor: null });
+            } else {
+                this.displayTable({ lookfor: input });
+            }
             //await new Promise(r => setTimeout(r, 2000));
             event.preventDefault();
         });
     }
 
     resetTable() {
-        for (var i = 0; i < this.#table.rows.length; i++){
-            this.#table.deleteRow(-1);
-        }
+        this.#table.innerHTML = "";
+        var row = this.#table.insertRow(0);
+        row.insertCell(0).innerHTML = "timestamp";
+        row.insertCell(1).innerHTML = "data";
     }
 
     addRow(timestamp, data) {
@@ -52,8 +56,11 @@ export class testTab{
 
     displayTable(filters) {
         this.resetTable();
+        console.log(filters);
         for (var i = 0; i < this.timestamps.length; i++){
+            //console.log(i);
             if (filters.lookfor == null || filters.lookfor == this.data[i]) {
+                //console.log("add");
                 this.addRow(this.timestamps[i], this.data[i]);  
             }
         }
