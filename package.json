@@ -19,11 +19,11 @@
     "prettier": "2.6.2"
   },
   "dependencies": {
-    "electron": "^21.1.1",
-    "electron-fetch": "^1.7.4",
+    "electron": "^21.2.0",
+    "electron-fetch": "^1.9.1",
     "jsonfile": "^6.1.0",
     "mkdirp": "^1.0.4",
-    "ssh2": "^1.5.0"
+    "ssh2": "^1.11.0"
   },
   "prettier": {
     "printWidth": 120,

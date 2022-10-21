@@ -821,6 +821,14 @@ ipcMain.on("add-tab", () => {
       }
     })
   );
+  menu.append(
+    new MenuItem({
+      label: "Mihir Tab",
+      click(_, window) {
+        window?.webContents.send("add-tab-response", 5);
+      }
+    })
+  )
 
   menu.popup();
 });
