@@ -720,30 +720,9 @@ table.test-table{
   width: 100%;
 }
 
-table.test-table{
+table.test-table tr td{
+  border: 1px solid black;
   border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 0.9em;
-  font-family:sans-serif;
-  min-width: 400px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-}
-table.test-table th,
-table.test-table td {
-  padding: 12px 15px;
-}
-
-table.test-table tr{
-  border-bottom: 1px solid #dddddd;
-}
-
-table.test-table tr:nth-of-type(even){
-  background-color: #f3f3f3;
-}
-
-form.filters-container{
-  margin-top: 50px;
-  margin-left: 10px;
 }
 
 
