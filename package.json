@@ -15,11 +15,11 @@
   "author": "FRC 6328",
   "license": "MIT",
   "devDependencies": {
-    "electron-builder": "^23.6.0",
+    "electron-builder": "^22.10.3",
     "prettier": "2.6.2"
   },
   "dependencies": {
-    "electron": "^21.2.0",
+    "electron": "^6.1.12",
     "electron-fetch": "^1.9.1",
     "jsonfile": "^6.1.0",
     "mkdirp": "^1.0.4",

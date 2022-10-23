@@ -214,7 +214,7 @@ export class Tabs {
         tabData.content = this.#contentTemplates.children[6].cloneNode(true);
         //tabData.content.insertBefore(this.#contentTemplates.children[5].cloneNode(true), tabData.content.firstChild);
         this.#viewer.appendChild(tabData.content);
-        tabData.controller = new MihirTestTab(tabData.content, "newTabTest")
+        tabData.controller = new MihirTestTab(tabData.content, "newTabTest");
     }
     this.#tabList.push(tabData);
     this.#selectedTab = this.#tabList.length - 1;
