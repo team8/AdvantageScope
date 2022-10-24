@@ -7,6 +7,7 @@ export class testTab{
     #logFile = new XMLHttpRequest();
     #logRaw = "";
     #date = new Date();
+    #cur_lookfor = null;
 
     timestamps = [];
     data = [];
@@ -48,7 +49,9 @@ export class testTab{
     resetTable() {
         this.#table.innerHTML = "";
         var row = this.#table.insertRow(0);
-        row.insertCell(0).innerHTML = "timestamp";
+        var timestamp = row.insertCell(0);
+        timestamp.innerHTML = "timestamp";
+        timestamp.style.width = "25%";
         row.insertCell(1).innerHTML = "data";
     }
 
