@@ -74,31 +74,6 @@ export class testTab{
     }
 
     async periodic() {
-        /*
-        console.log("rehehehe");
-        var logfile = new XMLHttpRequest();
-        await logfile.open("GET", "text.txt", false);
-        console.log(logfile.readyState);
-        //logfile.onreadystatechange = function () {
-            console.log("nyehhhhh");
-            //if (logfile.readyState == 4) {
-                //if (logfile.status == 200 || rawFile.status == 0) {
-                    var tmpRawText = logfile.responseText;
-                    if (tmpRawText.length > this.#logRaw) {
-                        var oldLength = this.#logRaw.length;
-                        this.#logRaw = tmpRawText;
-                        var addLogs = this.#logRaw.slice(oldLength, -1);
-                        addLogs = addLogs.split("\n");
-                        for (var i = 0; i < addLogs.length; i++){
-                            this.timestamps.push(this.#date.getMilliseconds());
-                            this.data.push(addLogs[i]);
-                        }
-                        
-                    }
-             //   }
-            //}
-        //}
-        */
         var res = await fetch("./modules/tabControllers/text.txt", {});
         //console.log(await res.text());
         var arr = (await res.text()).split("\n");
